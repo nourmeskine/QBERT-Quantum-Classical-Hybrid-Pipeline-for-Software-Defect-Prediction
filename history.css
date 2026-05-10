@@ -1,0 +1,250 @@
+/* ===== GLOBAL ===== */
+body {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: relative;
+  padding-top: 80px;
+  min-height: 100vh;
+  overflow-x: hidden; /* seulement pour éviter le scroll horizontal */
+  overflow-y: auto; /* autoriser le scroll vertical */
+}
+/* ===== HEADER ===== */
+
+.ai_logo {
+  color: #45d0e4;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* ===== CONTAINER ===== */
+.history_container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+/* ===== HEADER SECTION ===== */
+.history_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.history_header h1 {
+  color: #45d0e4;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+/* SEARCH INPUT */
+#searchInput {
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(69, 208, 228, 0.4);
+  color: #fff;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+}
+
+#searchInput:focus {
+  box-shadow: 0 0 10px #45d0e4;
+}
+
+/* ===== FILTER BUTTONS ===== */
+.filter_buttons {
+  margin-bottom: 25px;
+}
+
+.filter_buttons button {
+  margin-right: 10px;
+  padding: 10px 18px;
+
+  border: 1px solid rgba(69, 208, 228, 0.4);
+  background: transparent;
+  color: #45d0e4;
+
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter_buttons button:hover {
+  background: #45d0e4;
+  color: #000;
+  box-shadow: 0 0 15px #45d0e4;
+}
+
+.filter_buttons button.active {
+  background: linear-gradient(90deg, #45d0e4, #00e0ff);
+  color: #000;
+}
+
+/* ===== HISTORY LIST ===== */
+.history_list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* ===== CARD ===== */
+.history_card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+
+  padding: 25px;
+  border-radius: 15px;
+
+  border: 1px solid rgba(69, 208, 228, 0.2);
+  box-shadow: 0 0 20px rgba(69, 208, 228, 0.15);
+
+  transition: all 0.3s ease;
+}
+
+.history_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(69, 208, 228, 0.4);
+}
+
+/* ===== CARD TOP ===== */
+.card_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* MODEL TAG */
+.model_tag {
+  color: #45d0e4;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* RESULT TAG */
+.result_success {
+  color: #00ff9c;
+}
+.result_error {
+  color: #ff4d4d;
+}
+
+/* ===== CODE BLOCK ===== */
+.code_preview {
+  background: #0d1117;
+  padding: 15px;
+  margin: 15px 0;
+
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+
+  border-radius: 10px;
+  color: #00ff9c;
+
+  border-left: 3px solid #45d0e4;
+  overflow-x: auto;
+}
+
+/* ===== ACTIONS ===== */
+.card_actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* BUTTON BASE */
+.card_actions button {
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: none;
+
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* RERUN */
+.rerun {
+  background: linear-gradient(90deg, #45d0e4, #00e0ff);
+  color: #000;
+}
+
+.rerun:hover {
+  box-shadow: 0 0 15px #45d0e4;
+}
+
+/* DELETE */
+.delete {
+  background: transparent;
+  border: 1px solid #ff4d4d;
+  color: #ff4d4d;
+}
+
+.delete:hover {
+  background: #ff4d4d;
+  color: #000;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .history_header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  #searchInput {
+    width: 100%;
+  }
+
+  .card_top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
+
+header {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 8%;
+  position: fixed; /* FIXE */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: rgba(34, 33, 33, 0.9); /* ou blanc selon ton design */
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+.menu li {
+  list-style: none;
+  margin: 0 15px;
+}
+.menu li a {
+  color: #999;
+  text-decoration: 0;
+  text-transform: uppercase;
+  font-size: 20px;
+  transition: 0.5s;
+}
+.menu li a:hover {
+  color: #fff;
+}
+.login {
+  border: 1px solid #45d0e4;
+  padding: 8px 11px;
+}
+.menu .login a {
+  color: #45d0e4;
+}
+.menu .login:hover a {
+  color: #45d0e4;
+}

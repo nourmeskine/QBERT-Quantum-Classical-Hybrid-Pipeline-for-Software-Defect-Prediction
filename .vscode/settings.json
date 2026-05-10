@@ -1,0 +1,8 @@
+{
+  "python.defaultInterpreterPath": "C:\\Program Files\\Python313\\python.exe",
+  "python.analysis.extraPaths": [
+    "C:\\Users\\nourm\\AppData\\Roaming\\Python\\Python313\\site-packages",
+    "c:\\Users\\nourm\\.vscode\\extensions\\ms-security.ms-sentinel-2.0.2\\python",
+    "c:\\Users\\nourm\\.vscode\\extensions\\ms-security.ms-sentinel-2.1.0\\python"
+  ]
+}

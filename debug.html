@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUANTUM AI - Debug</title>
+    <link rel="stylesheet" href="style_debug.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  </head>
+  <body>
+    <!-- Header identique au Home -->
+
+    <header>
+      <div class="ai_logo"><span>!</span>QBERT</div>
+      <div class="menu_toggle"></div>
+      <ul class="menu">
+        <li><a href="index0.html">Home</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="index0.html#about">Info</a></li>
+      </ul>
+    </header>
+
+    <!-- Sélecteur de modèle -->
+    <section class="model_selector container">
+      <h2>Select a Model</h2>
+      <div class="model_cards">
+        <div class="model_card" data-model="1">
+          <i class="fas fa-robot icon"></i>
+          <span>MODEL 1</span>
+        </div>
+        <div class="model_card" data-model="2">
+          <i class="fas fa-microchip icon"></i>
+          <span>MODEL 2</span>
+        </div>
+        <div class="model_card" data-model="3">
+          <i class="fas fa-wave-square icon"></i>
+          <span>MODEL 3</span>
+        </div>
+        <div class="model_card" data-model="4">
+          <i class="fas fa-signal icon"></i>
+          <span>MODEL 4</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Choix du mode d'entrée -->
+    <section class="input_mode container">
+      <h2>Input Mode</h2>
+      <div class="mode_buttons">
+        <button id="writeMode" class="active" type="button">Write Code</button>
+        <button id="fileMode" type="button">Upload File</button>
+      </div>
+    </section>
+
+    <!-- Éditeur / Zone de code -->
+    <section class="editor_section container">
+      <h2>Code Editor</h2>
+      <textarea
+        id="codeEditor"
+        placeholder="Write your code here..."
+      ></textarea>
+      <input type="file" id="fileInput" style="display: none" />
+      <div class="editor_buttons">
+        <button id="runCode" type="button">Run / Debug</button>
+        <button id="clearCode" type="button">Clear</button>
+      </div>
+    </section>
+    <div class="output_container container">
+      <div class="console_header">
+        <span>AI Debug Console</span>
+        <div class="console_actions">
+          <button id="clearConsole" type="button">Clear</button>
+        </div>
+      </div>
+
+      <div class="output_console" id="outputConsole">
+        <p class="log info">> System ready...</p>
+      </div>
+    </div>
+
+    <script src="debug.js"></script>
+  </body>
+</html>

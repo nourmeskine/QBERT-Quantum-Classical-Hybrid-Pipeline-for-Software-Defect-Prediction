@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at top, #0a0f1f, #000);
+  color: #fff;
+  padding-top: 80px; /* header fixe */
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 8%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #111;
+  z-index: 100;
+}
+
+.ai_logo {
+  color: #45d0e4;
+  font-size: 40px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+.menu li {
+  list-style: none;
+  margin: 0 15px;
+}
+.menu li a {
+  color: #999;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.menu li a:hover {
+  color: #45d0e4;
+}
+.login {
+  border: 1px solid #45d0e4;
+  padding: 8px 12px;
+}
+.menu .login a {
+  color: #45d0e4;
+}
+
+/* Container général */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 60px auto;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 0 30px rgba(69, 208, 228, 0.2);
+}
+
+/* Sélecteur de modèle */
+.model_selector h2 {
+  color: #45d0e4;
+  margin-bottom: 20px;
+}
+.model_cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.model_card {
+  flex: 1 1 calc(25% - 20px);
+  background: linear-gradient(145deg, #0d1117, #1a1f2e);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(69, 208, 228, 0.3);
+}
+.model_card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 0 25px #45d0e4;
+}
+
+.model_card.active {
+  border: 2px solid #45d0e4;
+  box-shadow: 0 0 30px #45d0e4;
+}
+.model_card .icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #45d0e4;
+}
+
+/* Choix mode */
+.input_mode h2 {
+  color: #45d0e4;
+  margin-bottom: 10px;
+}
+.mode_buttons button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  background: #222;
+  border: 1px solid #45d0e4;
+  color: #45d0e4;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.mode_buttons button.active,
+.mode_buttons button:hover {
+  background: #45d0e4;
+  color: #000;
+}
+
+/* Éditeur */
+.editor_section h2 {
+  color: #45d0e4;
+  margin-bottom: 10px;
+}
+#codeEditor {
+  width: 100%;
+  min-height: 400px;
+  background: #0d1117;
+  color: #00ff9c;
+  padding: 20px;
+  border-radius: 12px;
+  font-family: "Courier New", monospace;
+  font-size: 15px;
+  border: 1px solid #45d0e4;
+  outline: none;
+  box-shadow: inset 0 0 10px rgba(69, 208, 228, 0.2);
+}
+
+#codeEditor::placeholder {
+  color: #666;
+}
+.editor_buttons {
+  margin-top: 10px;
+}
+.editor_buttons button {
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.editor_buttons button:hover {
+  background: #45d0e4;
+  color: #000;
+}
+#runCode:hover {
+  box-shadow: 0 0 20px #45d0e4;
+}
+
+#clearCode {
+  background: #111;
+  color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+}
+
+#clearCode:hover {
+  background: #ff4d4d;
+  color: #000;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .model_cards {
+    flex-direction: column;
+  }
+  .model_card {
+    flex: 1 1 100%;
+  }
+}
+
+button,
+.model_card {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.output_console {
+  background: #000;
+  color: #0f0;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: monospace;
+  height: 150px;
+  overflow-y: auto;
+  border: 1px solid #45d0e4;
+}
+/* CONTAINER */
+.output_container {
+  margin-top: 30px;
+}
+
+/* HEADER */
+.console_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.console_header span {
+  color: #45d0e4;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* ACTION BUTTON */
+.console_actions button {
+  background: transparent;
+  border: 1px solid #45d0e4;
+  color: #45d0e4;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.console_actions button:hover {
+  background: #45d0e4;
+  color: #000;
+}
+
+/* CONSOLE BODY */
+.output_console {
+  background: linear-gradient(145deg, #000, #0d1117);
+  border: 1px solid rgba(69, 208, 228, 0.3);
+  border-radius: 12px;
+  padding: 15px;
+  height: 180px;
+  overflow-y: auto;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  box-shadow: inset 0 0 10px rgba(69, 208, 228, 0.2);
+}
+
+/* LOG TYPES */
+.log {
+  margin-bottom: 5px;
+}
+
+.log.info {
+  color: #45d0e4;
+}
+
+.log.success {
+  color: #00ff9c;
+}
+
+.log.error {
+  color: #ff4d4d;
+}
+
+.log.warning {
+  color: #ffcc00;
+}

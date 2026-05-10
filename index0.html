@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUANTUM IA</title>
+    <link rel="stylesheet" href="style0.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="ai_logo"><span>!</span>QUANTUM AI</div>
+      <!-- responsive menu -->
+      <div class="menu_toggle"></div>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#" class="about_link">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li class="login"><a href="#">Login</a></li>
+      </ul>
+    </header>
+    <!-- description section -->
+
+    <section class="description">
+      <!-- div gauche -->
+      <div class="left">
+        <h1>
+          <span>SMARTER</span>
+          <span>DEBUGGING</span>
+          <span>WITH</span>
+          <span>THE</span>
+          <span>POWER</span>
+          <span>OF</span>
+          <span>QUANTUM</span>
+          <span>AND CLASSICAL AI</span>
+        </h1>
+        <p>
+          This website presents a hybrid AI model that combines quantum and
+          classical computing to detect bugs in code more efficiently. It helps
+          developers identify errors faster and improve the quality of their
+          software with advanced intelligent analysis. By merging innovation and
+          performance, the platform offers a smarter and more reliable approach
+          to debugging.
+        </p>
+        <a href="#" class="buy_now_link">Login</a>
+      </div>
+      <!-- div droite -->
+      <div class="right">
+        <img src="image1.png" class="image" />
+      </div>
+    </section>
+
+    <section id="about" class="about_models">
+      <h2 class="section_title">ABOUT OUR MODELS</h2>
+
+      <!-- MODEL 1 -->
+      <div class="model_container">
+        <div class="icon_box">
+          <i class="fas fa-brain icon"></i>
+          <span class="number"> MODEL 1</span>
+        </div>
+        <div class="model_info">
+          <h3>Quantum Hybrid Classifier 1</h3>
+          <p>
+            A hybrid quantum-classical model using IQP encoding and a strongly
+            entangling circuit with 6 qubits to capture complex data patterns.
+            Enhanced with dimensionality reduction and regularization
+            techniques, it provides a balanced trade-off between performance and
+            stability for classification tasks.
+          </p>
+          <a href="#" class="model_btn">Learn More</a>
+        </div>
+      </div>
+
+      <!-- MODEL 2 -->
+      <div class="model_container">
+        <div class="icon_box">
+          <i class="fas fa-rocket icon"></i>
+          <span class="number">MODEL 2</span>
+        </div>
+        <div class="model_info">
+          <h3>Quantum Hybrid Classifier 2</h3>
+          <p>
+            A streamlined hybrid quantum-classical model leveraging IQP encoding
+            and a strongly entangling 6-qubit circuit to learn complex feature
+            interactions. With a lighter post-processing layer, it focuses on
+            efficiency while maintaining solid classification performance and
+            stability..
+          </p>
+          <a href="#" class="model_btn">Learn More</a>
+        </div>
+      </div>
+
+      <!-- MODEL 3 -->
+      <div class="model_container">
+        <div class="icon_box">
+          <i class="fas fa-project-diagram icon"></i>
+          <span class="number">MODEL 3</span>
+        </div>
+        <div class="model_info">
+          <h3>Parallel Quantum Hybrid Classifier 1</h3>
+          <p>
+            A parallel hybrid quantum-classical model that splits input data
+            into multiple parts and processes them using amplitude encoding
+            across 6-qubit circuits. By aggregating features through
+            concatenation and applying dimensionality reduction, it enhances
+            scalability and captures richer representations for improved
+            classification performance.
+          </p>
+          <a href="#" class="model_btn">Learn More</a>
+        </div>
+      </div>
+
+      <!-- MODEL 4 -->
+      <div class="model_container">
+        <div class="icon_box">
+          <i class="fas fa-cubes icon"></i>
+          <span class="number">MODEL 4</span>
+        </div>
+        <div class="model_info">
+          <h3>Parallel Quantum Hybrid Classifier 2</h3>
+          <p>
+            An advanced parallel hybrid quantum-classical model that processes
+            data using amplitude encoding with 5-qubit circuits across a large
+            number of partitions. This fine-grained splitting enables detailed
+            feature extraction, while concatenation and dimensionality reduction
+            improve representation quality and overall classification
+            performance.
+          </p>
+          <a href="#" class="model_btn">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Login / Sign Up Modal -->
+    <div class="auth_modal" id="loginModal">
+      <div class="auth_modal_content">
+        <span class="close_modal">&times;</span>
+
+        <!-- Login Form -->
+        <div class="auth_login_form">
+          <h2>Login</h2>
+          <form>
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Password" required />
+            <button type="button" onclick="goToDebug()">Login</button>
+            <p>
+              Don't have an account? <a href="#" class="show_signup">Sign Up</a>
+            </p>
+          </form>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div class="auth_signup_form" style="display: none">
+          <h2>Sign Up</h2>
+          <form>
+            <input type="text" placeholder="Full Name" required />
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Password" required />
+            <input type="password" placeholder="Confirm Password" required />
+            <button type="button" onclick="goToDebug()">Sign Up</button>
+            <p>
+              Already have an account? <a href="#" class="show_login">Login</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="script0.js"></script>
+  </body>
+</html>
