@@ -46,14 +46,6 @@ The web platform is used as a live demonstration of the QBERT system.
 - Jupyter Notebooks  
 
 
-## Project Structure
-
-
-QBERT/
-│── backend/        # AI and API logic
-│── frontend/       # Web interface
-│── notebooks/      # Experiments and training
- 
 
 ## How to Run
 
